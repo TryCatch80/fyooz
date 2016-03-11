@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_STATIC_XML_SUBMITTED_APPLICATION'>
+        <message>COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_STATIC_XML_SUBMITTED_APPLICATION_MESSAGE</message>
+    </layout>
+    <state>
+        <name>COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_STATIC_XML_SUBMITTED_APPLICATION</name>
+        <description>COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_STATIC_XML_SUBMITTED_APPLICATION_DESCRIPTION</description>
+        <fields name="params">
+            <fieldset name='basic_settings'>
+                <field type="sql" name="id" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_STATIC_XML_APPLICANT_TO_DISPLAY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_STATIC_XML_COMPLETED_EMPLOYMENT_APPLICATION_TO_DISPLAY'
+			 query="SELECT '- Select Applicant -' as id, '' as value UNION SELECT CONCAT(last_name, ', ', first_name) as id, uid as value FROM #__tst_jgapp_applications" />
+            </fieldset>
+        </fields>
+    </state>
+</metadata>

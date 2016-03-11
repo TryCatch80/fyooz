@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset><!-- addfieldpath="/administrator/components/com_categories/models/fields"-->
+		<field name="id"
+			type="text"
+			label="JGLOBAL_FIELD_ID_LABEL"
+			description="JGLOBAL_FIELD_ID_DESC"
+			size="10"
+			default="0"
+			readonly="true"
+			class="readonly"
+		/>
+
+		<field name="name"
+			type="text"
+			label="COM_INDUSTRY_FIELD_NAME_LABEL"
+			description="COM_INDUSTRY_FIELD_NAME_DESC"
+			class="input-xxlarge input-large-text"
+			size="40"
+			required="true"
+		 />
+
+		<field name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+			size="45"
+		/>
+
+		<field name="industry_id"
+			type="sql"
+			label="COM_INDUSTRY_JFIELD_INDUSTRY_LABEL"
+			description="COM_INDUSTRY_JFIELD_INDUSTRY_DESC"
+			hint="COM_INDUSTRY_JFIELD_INDUSTRY_PLACEHOLDER"
+			required="true"
+			query="SELECT id, name FROM #__industry_name" key_field="id" value_field="name">
+			<option value="">-Select Industry-</option>
+			</field>
+
+		<field name="introtitle"
+			type="text"
+			label="COM_INDUSTRY_JFIELD_INTROTITLE_LABEL"
+			description="COM_INDUSTRY_JFIELD_INTROTITLE_DESC"
+			hint="COM_INDUSTRY_JFIELD_INTROTITLE_PLACEHOLDER"
+		/>
+		<field name="introtext"
+			type="textarea"
+			label="COM_INDUSTRY_JFIELD_INTROTEXT_LABEL"
+			description="COM_INDUSTRY_JFIELD_INTROTEXT_DESC"
+			hint="COM_INDUSTRY_JFIELD_INTROTITLE_PLACEHOLDER"
+		/>
+		<field name="readlink"
+			type="url"
+			label="COM_INDUSTRY_JFIELD_READLINK_LABEL"
+			description="COM_INDUSTRY_JFIELD_READLINK_DESC"
+			hint="COM_INDUSTRY_JFIELD_READLINK_PLACEHOLDER"
+		/>
+		
+		<field name="images"
+			type="media"
+			directory="fyoozindustry/slides"
+			label="COM_INDUSTRY_JFIELD_IMAGE_LABEL"
+			description="COM_INDUSTRY_JFIELD_IMAGE_DESC"
+		/>
+
+		<field name="version_note"
+			type="text"
+			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			class="span12" size="45"
+			labelclass="control-label"
+		/>
+
+		<field name="user_id"
+			type="user"
+			label="COM_INDUSTRY_FIELD_LINKED_USER_LABEL"
+			description="COM_INDUSTRY_FIELD_LINKED_USER_DESC"
+		/>
+
+		<field id="published"
+			name="published"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="chzn-color-state"
+			size="1"
+			default="1"
+		>
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+
+		</field>
+
+		<!--<field name="catid"
+			type="categoryedit"
+			extension="com_industry"
+			label="JCATEGORY"
+			description="JFIELD_CATEGORY_DESC"
+		/>-->
+
+		
+		
+		<field name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			size="1"
+		/>
+
+		<!--<field name="misc" type="editor"
+			label="COM_INDUSTRY_FIELD_INFORMATION_MISC_LABEL"
+			description="COM_INDUSTRY_FIELD_INFORMATION_MISC_DESC"
+			filter="JComponentHelper::filterText"
+			buttons="true"
+			hide="readmore,pagebreak"
+			 />no more needed:check for edit-->
+
+		<field name="created_by" type="user"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="COM_INDUSTRY_FIELD_CREATED_BY_DESC" />
+
+		<field name="created_by_alias" type="text"
+			label="COM_INDUSTRY_FIELD_CREATED_BY_ALIAS_LABEL" description="COM_INDUSTRY_FIELD_CREATED_BY_ALIAS_DESC"
+			size="20" />
+
+		<field name="created" type="calendar" label="COM_INDUSTRY_FIELD_CREATED_LABEL"
+			description="COM_INDUSTRY_FIELD_CREATED_DESC" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+
+		<field name="modified" type="calendar" class="readonly"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL" description="COM_INDUSTRY_FIELD_MODIFIED_DESC"
+			size="22" readonly="true" format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+
+		<field name="modified_by" type="user"
+		label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+		class="readonly"
+		readonly="true"
+		filter="unset"/>
+
+		<field name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		 />
+
+		<field name="ordering"
+			type="ordering"
+			label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC"
+            content_type="com_industry.industry"
+		/>
+
+		<field name="publish_up" type="calendar"
+			label="COM_INDUSTRY_FIELD_PUBLISH_UP_LABEL" description="COM_INDUSTRY_FIELD_PUBLISH_UP_DESC"
+			format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc"
+		/>
+
+		<field name="publish_down" type="calendar"
+			label="COM_INDUSTRY_FIELD_PUBLISH_DOWN_LABEL" description="COM_INDUSTRY_FIELD_PUBLISH_DOWN_DESC"
+			format="%Y-%m-%d %H:%M:%S" size="22"
+			filter="user_utc"
+		/>
+
+		<field name="metakey"
+			type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL"
+			description="JFIELD_META_KEYWORDS_DESC"
+			rows="3"
+			cols="30"
+		 />
+
+		<field name="metadesc"
+			type="textarea"
+			label="JFIELD_META_DESCRIPTION_LABEL"
+			description="JFIELD_META_DESCRIPTION_DESC"
+			rows="3"
+			cols="30"
+		/>
+
+		<field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+			description="COM_INDUSTRY_FIELD_LANGUAGE_DESC"
+		>
+			<option value="*">JALL</option>
+		</field>
+
+		<field name="featured"
+			type="radio"
+			class="btn-group btn-group-yesno"
+			label="JFEATURED"
+			description="COM_INDUSTRY_FIELD_FEATURED_DESC"
+			default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="tags"
+			type="tag"
+			label="JTAG"
+			description="JTAG_DESC"
+			class="span12"
+			multiple="true"
+		>
+		</field>
+	</fieldset>
+	
+
+	<field name="hits"
+		type="text"
+		class="readonly"
+		size="6" label="JGLOBAL_HITS"
+		description="COM_INDUSTRY_HITS_DESC"
+		readonly="true"
+		filter="unset" />
+
+	<field name="version" type="text" class="readonly"
+		label="COM_INDUSTRY_FIELD_VERSION_LABEL" size="6" description="COM_INDUSTRY_FIELD_VERSION_DESC"
+		readonly="true" filter="unset" />
+
+</form>

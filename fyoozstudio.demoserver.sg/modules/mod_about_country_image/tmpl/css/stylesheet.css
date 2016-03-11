@@ -1,0 +1,292 @@
+@CHARSET "UTF-8";
+
+@media screen and (max-width: 1235px) {
+    div.imagebox div.texts.text-position1,
+    div.imagebox div.texts.text-position2,
+    div.imagebox div.texts.text-position3 {
+        display:table !important;
+        width:100% !important;
+        height:270px !important;
+        padding:0 !important;
+    }
+
+    div.imagebox div.texts.text-position1 p,
+    div.imagebox div.texts.text-position2 p,
+    div.imagebox div.texts.text-position3 p {
+        margin-bottom: 30px !important;
+    }
+
+    div.imagebox div.texts.text-position1 > div.link-title,
+    div.imagebox div.texts.text-position2 > div.link-title,
+    div.imagebox div.texts.text-position3 > div.link-title {
+        display:table-cell !important;
+        vertical-align: middle !important;
+    }
+    div.imagebox div.image.text-position1,
+    div.imagebox div.image.text-position2,
+    div.imagebox div.image.text-position3 {
+        display:block !important;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        width: 100% !important;
+    }
+    div.imagebox div.texts.text-position1 a,
+    div.imagebox div.texts.text-position3 a,
+    div.imagebox div.texts.text-position1 p,
+    div.imagebox div.texts.text-position3 p {
+        white-space: pre-wrap !important;
+        white-space: -moz-pre-wrap !important;
+        white-space: -pre-wrap !important;
+        white-space: -o-pre-wrap !important;
+        word-wrap: break-word !important;
+    }
+}
+
+div.imagebox {
+    clear: both;
+    width: 301px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    height: 300px;
+    max-height: 700px;
+    background-size: cover;
+    -ms-behavior: url(backgroundsize.min.htc);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #ddd;
+    display: table;
+    position: relative;
+}
+
+
+div.imagebox div.silhoutte {
+    display: block;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #000000;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+}
+
+div.imagebox.w2 {
+    width: 643px
+}
+
+div.imagebox.noimage {
+    background: #fff100;
+}
+
+div.imagebox img {
+    width: initial;
+    min-width: 100%;
+    height: initial;
+}
+
+div.imagebox.w2 img {
+    width: 100%;
+    height: initial;
+}
+
+div.imagebox.h2 img {
+    width: initial;
+    height: 300px;
+}
+
+div.imagebox div.texts {
+     display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+div.imagebox div.texts p {
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0pt;
+    word-spacing: 0pt;
+    font-size: 20px;
+    font-family: 'OpenSans-Bold', Arial, sans-serif;
+    line-height: 28px;
+    cursor: auto;
+    position: relative;
+}
+
+div.imagebox div.texts.text-position0 p {
+    font-size: 21px;
+    text-decoration: underline;
+    line-height: 24px;
+}
+
+div.imagebox div.texts a {
+    font-family: 'OpenSans-Bold', Arial, sans-serif;
+    /*color: #000000;*/
+    font-size: 13px;
+    /*background: #ffffff;*/
+    padding: 2px 15px 2px 15px;
+    /*border: solid #000000 1px;*/
+    text-decoration: none;
+    margin-top: 10px;
+    text-transform: uppercase;
+    cursor: auto;
+    display: inline-block;
+    position: relative;
+}
+
+div.imagebox div.texts a:hover,div.highlight a button:hover
+    {
+    background: #F2F2F2;
+}
+
+div.imagebox div.texts a strong {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+
+div.imagebox div.texts.text-position1,
+div.imagebox div.texts.text-position3 {
+    display:table-cell;
+    width:auto;
+}
+div.imagebox div.texts.text-position2 p {
+    margin: 25px 10px 82px 10px;
+}
+
+div.imagebox.w1 div.texts.text-position2 p, div.imagebox.fromgrid div.texts.text-position2 p {
+    font-size: 18px;
+}
+
+div.imagebox.w1 div.texts.text-position2 a, div.imagebox.fromgrid div.texts.text-position2 a {
+    font-size: 12px;
+}
+
+div.imagebox div.texts a,
+div.imagebox div.texts p {
+    white-space: pre;
+}
+
+div.imagebox div.texts.text-position2 p, div.imagebox div.texts.text-position2 a,
+div.imagebox div.texts.text-position0 p, div.imagebox div.texts.text-position0 a  {
+    white-space: pre-wrap;
+}
+@media screen and (min-width: 1201px){
+    div.imagebox div.texts:not(.text-position0) div.link {
+        position: absolute;
+        left:0;
+        bottom:25px;
+        right:0;
+    }
+}
+
+div.imagebox div.image.text-position1,
+div.imagebox div.image.text-position3 {
+    display:table-cell;
+    width:100%;
+    position: relative;
+}
+
+div.imagebox div.image.text-position1,
+div.imagebox div.image.text-position3 {
+    display:table-cell;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+div.imagebox div.texts.text-position2{
+    height:165px;
+    padding:30px;
+}
+
+div.imagebox div.image.text-position2{
+    display:block;
+    position: relative;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+div.imagebox div.texts.text-position1,
+div.imagebox div.texts.text-position3 {
+    min-width: 215px !important;
+    position: relative;
+}
+
+div.imagebox div.texts.text-position1 > div.link-title,
+div.imagebox div.texts.text-position3 > div.link-title {
+    display:block;
+    padding: 10px;
+}
+
+div.imagebox div.texts.text-position2{
+    padding:0 !important;
+    display: table-row;
+}
+
+div.imagebox div.texts.text-position2 > div.link-title {
+    display:table-cell;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding:0 !important;
+    position: relative;
+}
+
+div.imagebox div.texts  a {
+    border-color: black;
+    color:black;
+}
+
+div.imagebox div.texts.text-position0 a {
+    border-color: black !important;
+    color:black !important;
+}
+div.imagebox {
+    position: relative;
+}
+
+div.imagebox div.silhoutte {
+    width:100%;
+    height:100%;
+}
+
+div.imagebox > div.texts {
+    width:100%;
+    display:table;
+}
+div.imagebox div.texts:not(.text-position0)  a {
+    background:none !important;
+}
+
+div.imagebox div.texts.text-position0 {
+    height: 100%;
+}
+
+div.imagebox div.texts.text-position0 > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px;
+}
+
+@-moz-document url-prefix() {
+    div.imagebox div.texts div.link {
+        position: static !important;
+        margin-bottom: 25px;
+    }
+    div.imagebox div.texts.text-position2 p {
+        margin: 25px 10px 25px 10px;
+    }
+}

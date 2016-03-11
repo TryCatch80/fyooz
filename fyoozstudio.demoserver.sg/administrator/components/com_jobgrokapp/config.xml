@@ -1,0 +1,27 @@
+<config>
+	<fields>
+            <fieldset name='basic'>
+                <field name="use_legacy_router" type="radio" class="btn-group" default="2" label="COM_JOBGROKAPP_CONFIG_XML_ROUTING" description='COM_JOBGROKAPP_CONFIG_XML_SH_ROUTING'>
+                    <option value="1">COM_JOBGROKAPP_CONFIG_XML_YES</option>
+                    <option value="0">COM_JOBGROKAPP_CONFIG_XML_NO</option>
+                    <option value="2">COM_JOBGROKAPP_CONFIG_XML_SEF_OFF</option>
+                </field>
+                <field name="display_errors" type="radio" class="btn-group" default="99" label="COM_JOBGROKAPP_CONFIG_XML_DISPLAY_ERRORS" description='COM_JOBGROKAPP_CONFIG_XML_SH_DISPLAY_ERRORS'>
+                    <option value="1">COM_JOBGROKAPP_CONFIG_XML_YES</option>
+                    <option value="0">COM_JOBGROKAPP_CONFIG_XML_NO</option>
+                    <option value="99">COM_JOBGROKAPP_CONFIG_XML_USE_PHP_SETTING</option>
+                </field>
+            </fieldset>
+            <fieldset name='miscellaneous_settings'>
+                <field name="convert_encoding" type="radio" class="btn-group" default="0" label="COM_JOBGROKAPP_CONFIG_XML_CONVERT_ENCODING" description='COM_JOBGROKAPP_CONFIG_XML_SH_CONVERT_ENCODING'>
+                    <option value="1">COM_JOBGROKAPP_CONFIG_XML_YES</option>
+                    <option value="0">COM_JOBGROKAPP_CONFIG_XML_NO</option>
+                </field>
+                <field name="convert_from" type="text" default="" label="COM_JOBGROKAPP_CONFIG_XML_CONVERT_ENCODING_FROM" description='COM_JOBGROKAPP_CONFIG_XML_SH_CONVERT_ENCODING_FROM' />
+                <field name="convert_to" type="text" default="" label="COM_JOBGROKAPP_CONFIG_XML_CONVERT_ENCODING_TO" description='COM_JOBGROKAPP_CONFIG_XML_SH_CONVERT_ENCODING_TO' />
+            </fieldset>
+            <fieldset name="permissions" description='COM_JOBGROKAPP_CONFIG_XML_PERMISSIONS_DESC' label="COM_JOBGROKAPP_CONFIG_XML_PERMISSIONS_LABEL" >
+                <field name="rules" type="rules" class="inputbox" component="com_jobgrokapp" filter="rules" validate="rules" label="COM_JOBGROKAPP_CONFIG_XML_PERMISSIONS_LABEL" section="component" />
+            </fieldset>
+        </fields>
+</config>

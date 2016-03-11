@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_COMPACT_APPLICATION_FORM'>
+        <message>COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_COMPACT_APPLICATION_FORM_MESSAGE</message>
+    </layout>
+    <state>
+        <name>COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_COMPACT_APPLICATION_FORM</name>
+        <description>COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_COMPACT_APPLICATION_FORM_DESCRIPTION</description>
+    </state>
+    <fields name="params">
+        <fieldset name='settings' addfieldpath="/administrator/components/com_content/models/fields">
+            <field name="display_title" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DISPLAY_TITLE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DISPLAY_TITLE_DESCRIPTION'>
+		<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+		<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+            </field>
+            <field name="title" type="text" default="Employment Application" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_TITLE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_TITLE_DESC' size="30" />
+            <field name="display_intro" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DISPLAY_INTRO" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DISPLAY_INTRO_DESCRIPTION'>
+		<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+		<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+            </field>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application General Settings&lt;/div&gt;" />
+                <field name="use_captcha" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CAPTCHA" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CAPTCHA'>
+                    <option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_OFF</option>
+                    <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BASIC</option>
+                    <option value="2">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_RECAPTCHA</option>
+                </field>
+                <field name="recaptcha_publickey" type="text" default="" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_RECAPTCHA_PUBLICKEY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_RECAPTCHA_PUBLICKEY' />
+                <field name="recaptcha_privatekey" type="text" default="" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_RECAPTCHA_PRIVATEKEY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_RECAPTCHA_PRIVATEKEY' />
+                <field name="recaptcha_style" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_RECAPTCHA_STYLE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_RECAPTCHA_STYLE'>
+                    <option value="clean">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CLEAN</option>
+                    <option value="white">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_WHITE</option>
+                    <option value="blackglass">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BLACKGLASS</option>
+                    <option value="red">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_RED</option>
+                </field>
+                <field name="recaptcha_ssl" type="radio" class="btn-group" default="0" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_RECAPTCHA_SSL" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_RECAPTCHA_SSL'>
+                    <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                    <option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+                </field>
+            <field name="display_job_referral" type="radio" class="btn-group" default="0" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DISPLAY_JOB_REFERRAL" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_DISPLAY_JOB_REFERRAL'>
+                <option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+            </field>
+            <field name="referral_legend" type="text" default="" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REFERRAL_LEGEND" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REFERRAL_LEGEND' />
+            <field name="referral_text" type="text" default="" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REFERRAL_TEXT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REFERRAL_TEXT' />
+            <field name="submit_application_text" type="text" default="" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SUBMIT_APPLICATION_TEXT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_SUBMIT_APPLICATION_TEXT' />
+
+            <field name="thankyou_article" type="modal_article" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SUBMIT_ARTICLE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_SUBMIT_ARTICLE' />
+            <field name="display_submitted_data" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DISPLAY_SUBMITTED_DATA" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW_DISPLAY_SUBMITTED_DATA'>
+                <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                <option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+            </field>
+            <field name="show_pdf_option" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW_PDF_OPTION" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW_PDF_OPTION_DESCRIPTION'>
+		<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+		<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+		<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+            </field>
+            <field name="show_print_option" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW_PRINT_OPTION" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW_PRINT_OPTION_DESCRIPTION'>
+		<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+		<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+		<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+            </field>
+            <field name="jg_date_format" type="text" default="Y-m-d G:i:s" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_JG_DATE_FORMAT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_JG_DATE_FORMAT' />
+            <field name="app_create_date_format" type="text" default="m-d-Y" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_APP_CREATE_DATE_FORMAT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_APP_CREATE_DATE_FORMAT_DESCRIPTION' size="30" />
+            <field name="custom_redirect" type="text" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CUSTOM_REDIRECT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DESCRIPTION_CUSTOM_REDIRECT' />
+            <field name="form_background_color" type="text" default="#f6f6f6" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BACKGROUND_COLOR" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_BACKGROUND_COLOR' />
+            </fieldset>
+            <fieldset name='personal_information'>
+                <field type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application Personal Information Fields&lt;/div&gt;" />
+		<field name="personal_information" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_PERSONAL_INFORMATION" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_PERSONAL_INFORMATION'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="required_first_name" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_FIRST_NAME" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_FIRST_NAME'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_middle_name" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_MIDDLE_NAME" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_MIDDLE_NAME'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+                </field>
+		<field name="required_last_name" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_LAST_NAME" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_LAST_NAME'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_home_phone" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_HOME_PHONE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_HOME_PHONE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_work_phone" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_WORK_PHONE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_WORK_PHONE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_cell_phone" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_CELL_PHONE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_CELL_PHONE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_email_address" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_EMAIL_ADDRESS" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMAIL_ADDRESS'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+        </fieldset>
+        <fieldset name='addresses'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application Address Fields&lt;/div&gt;" />
+		<field name="addresses" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_ADDRESSES" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_ADDRESSES'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="addresses_current" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_ADDRESSES_CURRENT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_ADDRESSES_CURRENT'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="addresses_1" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_ADDRESSES_1" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_ADDRESSES_1'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="addresses_2" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_ADDRESSES_2" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_ADDRESSES_2'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="required_address_street" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_STREET" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CSH_REQUIRED_ADDRESS_STREET'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_address_city" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_CITY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CSH_REQUIRED_ADDRESS_CITY'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_address_zip_code" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_ZIP_CODE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CSH_REQUIRED_ADDRESS_ZIP_CODE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_address_state" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_STATE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CSH_REQUIRED_ADDRESS_STATE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+                <field name="required_address_from_date" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_ADDRESS_SINCE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CSH_REQUIRED_ADDRESS_FROM_DATE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+	</fieldset>
+        <fieldset name='education'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application Education Fields&lt;/div&gt;" />
+		<field name="education" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EDUCATION" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EDUCATION'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="education_high" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EDUCATION_HIGH" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EDUCATION_HIGH'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="education_undergrad" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EDUCATION_UNDERGRAD" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EDUCATION_UNDERGRAD'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="education_grad" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EDUCATION_GRAD" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EDUCATION_GRAD'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="education_other" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EDUCATION_OTHER" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EDUCATION_OTHER'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+	</fieldset>
+        <fieldset name='employment_information'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application Employment Information Fields&lt;/div&gt;" />
+		<field name="employment_information" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMPLOYMENT_INFORMATION" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMPLOYMENT_INFORMATION'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_position" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_POSITION_APPLIED_FOR" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_POSITION_APPLIED_FOR'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+                <field name="employment_information_position_auto" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_POSITION_APPLIED_FOR_AUTO" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_POSITION_APPLIED_FOR_AUTO'>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                        <option value="2">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+                </field>
+		<field name="employment_information_date_you_can_start" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DATE_YOU_CAN_START" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_DATE_YOU_CAN_START'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_desired_salary" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DESIRED_SALARY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_DESIRED_SALARY'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+                <field name="employment_information_currency" type="text" default="" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CURRENCY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CURRENCY_DESC' />
+		<field name="employment_information_do_you_prefer" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DO_YOU_PREFER" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_DO_YOU_PREFER'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_can_you_work" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CAN_YOU_WORK" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CAN_YOU_WORK'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_available" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_AVAILABLE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_AVAILABLE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_not_available" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NOT_AVAILABLE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_NOT_AVAILABLE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_question_1" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_Q1" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_Q1'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_question_2" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_Q2" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_Q2'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_question_3" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_Q3" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_Q2'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_question_4" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_Q4" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_Q4'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_question_5" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_Q5" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_Q5'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_question_6" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_Q6" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_Q6'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_question_7" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_Q7" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_Q7'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_information_question_8" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_Q8" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_Q8'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+	</fieldset>
+        <fieldset name='employment_history'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application Employment History Fields&lt;/div&gt;"  />
+		<field name="employment_history" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMPLOYMENT_HISTORY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMPLOYMENT_HISTORY'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+                <field name="employment_history_contact_current_employer" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CONTACT_CURRENT_EMPLOYER" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CONTACT_CURRENT_EMPLOYER'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+		<field name="employment_history_recent" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMPLOYMENT_HISTORY_RECENT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMPLOYMENT_HISTORY_RECENT'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_history_1" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMPLOYMENT_HISTORY_1" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMPLOYMENT_HISTORY_1'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_history_2" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMPLOYMENT_HISTORY_2" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMPLOYMENT_HISTORY_2'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="employment_history_3" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMPLOYMENT_HISTORY_3" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMPLOYMENT_HISTORY_3'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="required_employment_history_employer" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_EMPLOYER" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_city" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_CITY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_CITY'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_state" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_STATE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_STATE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_zip_code" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_ZIP_CODE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_ZIP_CODE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_phone" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_PHONE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_PHONE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_position" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_POSITION_HELD" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_POSITION'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_from" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_FROM_DATE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_FROM'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_to" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_TO_DATE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_TO'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_pay" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_PAY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_PAY'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_supervisor" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_SUPERVISOR" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_SUPERVISOR'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_duties" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_DUTIES" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_DUTIES'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_employment_history_reason" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_REASON_FOR_LEAVING" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_EMPLOYER_REASON'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+	</fieldset>
+        <fieldset name='job_related_skills'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application Job Related Skills Fields&lt;/div&gt;" />
+		<field name="job_related_skills" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_JOB_RELATED_SKILLS" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_JOB_RELATED_SKILL'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+                <field name="job_related_skills_text" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_JOB_RELATED_SKILLS_TEXT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_JOB_RELATED_SKILLS_TEXT'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>                    
+                </field>
+		<field name="job_related_skills_q1" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_VEHICLE_Q1" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_VEHICLE_Q1'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="job_related_skills_q2" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_VEHICLE_Q2" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_VEHICLE_Q2'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="job_related_skills_q2_reason" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_VEHICLE_Q2_REASON" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_VEHICLE_Q2_REASON'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+                <field name="job_related_skills_q3" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_VEHICLE_Q3" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_VEHICLE_Q3'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+                <field name="job_related_skills_q3_reason" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_VEHICLE_Q3_REASON" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_VEHICLE_Q3_REASON'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+		<field name="job_related_skills_states" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_VEHICLE_ST" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_VEHICLE_ST'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="job_related_skills_skills" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SKILLS" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_SKILLS'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="job_related_skills_designations" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_PROF_DESIGNATIONS" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_PROG_DESIGNATIONS'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+            </fieldset>
+            <fieldset name='references'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application References Fields&lt;/div&gt;" />
+		<field name="references" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REFERENCES" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REFERENCES'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="references_1" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REFERENCES_1" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REFERENCES_1'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="references_2" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REFERENCES_2" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REFERENCES_2'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="references_3" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REFERENCES_3" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REFERENCES_3'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="references_4" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REFERENCES_4" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REFERENCES_4'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="required_references_name" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_REF_NAME" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_REFERENCES_NAME'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_references_address" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_REF_ADDRESS" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_REFERENCES_ADDRESS'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_references_telephone" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_REF_TELEPHONE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_REFERENCES_TELEPHONE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_references_relationship" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_REF_RELATIONSHIP" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_REFERENCES_RELATIONSHIP'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+		<field name="required_references_years" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_REF_YEARS_ACQUAINTED" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_REFERENCES_YEARS'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+            </fieldset>
+            <fieldset name='resume'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application Text Resume Fields&lt;/div&gt;" />
+		<field name="text_resume" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_TEXT_RESUME" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_TEXT_RESUME'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="file_upload" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_UPLOAD_FILE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_UPLOAD_FILE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="file_upload_types" type="text" default="doc,docx,pdf,txt" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_UPLOAD_FILE_TYPES" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_UPLOAD_FILE_TYPES' />
+                <field name="file_restrict_by_mimetype" type="list" default="0" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_UPLOAD_RESTRICT_BY_MIMETYPE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_UPLOAD_RESTRICT_BY_MIMETYPE'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+						<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                </field>
+                <field name="file_mime_types" type="text" default="" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_UPLOAD_MIMETYPES" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_UPLOAD_MIMETYPES' />
+                <field name="file_upload_max_size" type="text" default="1045876" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_UPLOAD_FILE_MAX_SIZE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_UPLOAD_FILE_MAX_SIZE' />
+            </fieldset>
+            <fieldset name='agreement'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Application Agreement&lt;/div&gt;" />
+		<field name="agreement" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_AGREEMENT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_AGREEMENT'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="certification_agreement_bullet1" type="textarea" default="The company and other persons or employers are released from all liability brought forth by any investigation resulting from my submission of this electronic application and the data contained here in." label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_AGREEMENT_BULLET_1" cols="40" rows="5" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CERTIFICATION_AGREEMENT_BULLET1' />
+                <field name="bullet1_on" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BULLET1_ON" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_BULLET1_ON'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+                <field name="certification_agreement_bullet2" type="textarea" default="The information in this application is true and complete to the best of my knowledge. Any falsification, misrepresentation, or omission on this application can be cause for denial or termination of employment." label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_AGREEMENT_BULLET_2" cols="40" rows="5" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CERTIFICATION_AGREEMENT_BULLET2' />
+                <field name="bullet2_on" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BULLET2_ON" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_BULLET2_ON'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+                <field name="certification_agreement_bullet3" type="textarea" default="If hired, my employment is voluntary, meaning that either party can employment at any time for any reason. Upon acceptance of employment if a position is offered, I agree to abide by all existing and future company rules and regulations. The company reserves the right to change any working agreement as deemed necessary." label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_AGREEMENT_BULLET_3" cols="40" rows="5" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CERTIFICATION_AGREEMENT_BULLET3' />
+                <field name="bullet3_on" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BULLET3_ON" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_BULLET3_ON'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+                <field name="certification_agreement_bullet4" type="textarea" default="Any employment offer is contingent open my providing proof of identity and eligibility to work the country of employ." label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_AGREEMENT_BULLET_4" cols="40" rows="5" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CERTIFICATION_AGREEMENT_BULLET4' />
+                <field name="bullet4_on" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BULLET4_ON" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_BULLET4_ON'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+                <field name="certification_agreement_bullet5" type="textarea" default="I have read and reviewed the information provided in this application and the above statements. By signing this application for employment I certify that I understand all parts of it and have answered all questions completely and fully." label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_AGREEMENT_BULLET_5" cols="40" rows="5" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CERTIFICATION_AGREEMENT_BULLET5' />
+                <field name="bullet5_on" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BULLET5_ON" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_BULLET5_ON'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+                <field name="certification_agreement_bullet6" type="textarea" default="I understand that by typing my name in the signature box below and submitting this application electronically, this becomes a legal and binding contract." label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_AGREEMENT_BULLET_6" cols="40" rows="5" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CERTIFICATION_AGREEMENT_BULLET6' />
+                <field name="bullet6_on" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_BULLET6_ON" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_BULLET6_ON'>
+                        <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                        <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+		<field name="display_custom_yes_no" type="list" default="0" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CUSTOM_YES_NO" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CUSTOM_YES_NO'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+		</field>
+		<field name="default_custom_yes_no" type="list" default="0" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CUSTOM_YES_NO_DEFAULT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CUSTOM_YES_NO_DEFAULT'>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+		</field>
+                <field name="text_custom_yes_no" type="textarea" default="Enter a yes/no question." label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_CUSTOM_YES_NO_TEXT" cols="40" rows="5" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_CUSTOM_YES_NO_TEXT' />
+                <field name="signature" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DISPLAY_SIGNATURE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_SIGNATURE'>
+                    <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_HIDE</option>
+                    <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SHOW</option>
+                </field>
+                <field name="required_signature" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_REQUIRE_SIGNATURE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_REQUIRED_SIGNATURE'>
+                    <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                    <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+                </field>
+            </fieldset>
+            <fieldset name='email_notification'>
+		<field  type="spacer" default="&lt;div style=quot;width:100%; color: #666666; font-weight: bold; border-top:1px solid #f6f6f6; border-bottom:1px solid #f6f6f6&quot;&gt;Email Notification Settings&lt;/div&gt;" />
+		<field name="email_notification" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION'>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DISABLE</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_ENABLE</option>
+		</field>
+		<field name="email_notification_include" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION_INCLUDE" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION_INCLUDE'>
+			<option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+			<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+			<option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+		</field>
+                <field name="email_notification_html" type="list" default="1" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION_HTML" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION_HTML'>
+                    <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+		    <option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+                    <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                </field>
+                <field name="email_notify_applicant" type="list" default="0" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION_APPLICANT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION_APPLICANT'>
+                    <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+					<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+                    <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                </field>
+		<field name="email_notification_recipient" type="text" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION_RECIPIENT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION_RECIPIENT' />
+		<field name="email_notification_reply" type="text" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION_REPLY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION_REPLY' />
+		<field name="email_notification_subject" type="text" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION_SUBJECT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION_SUBJECT' />
+                <field name="email_include_filelink" default="0" type="list" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_INCLUDE_FILELINK" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_INCLUDE_FILELINK'>
+                    <option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_DO_NOT_INCLUDE</option>
+                    <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_INCLUDE_AS_LINK</option>
+                    <option value="2">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_INCLUDE_AS_ATTACHMENT</option>
+                </field>
+                <field name="email_applicant_subject" type="text" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION_APPLICANT_SUBJECT" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION_APPLICANT_SUBJECT' />
+                <field name="email_applicant_body" type="textarea" cols="40" rows="5" filter="raw" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_NOTIFICATION_APPLICANT_BODY" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_EMAIL_NOTIFICATION_APPLICANT_BODY' />
+                <field name="email_validate_checkdnsrr" default="0" type="list" label="COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_EMAIL_DNS_VALIDATION" description='COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_SH_DNS_VALIDATION'>
+                    <option value="">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_USE_GLOBAL</option>
+					<option value="0">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_NO</option>
+                    <option value="1">COM_JOBGROKAPP_VIEWS_APPLICATION_TMPL_FORM_XML_YES</option>
+                </field>
+        </fieldset>
+    </fields>
+</metadata>
