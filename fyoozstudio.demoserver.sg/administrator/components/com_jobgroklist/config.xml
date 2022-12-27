@@ -18,9 +18,7 @@
                     <option value="0">COM_JOBGROKLIST_CONFIG_XML_YES</option>
                     <option value="1">COM_JOBGROKLIST_CONFIG_XML_NO</option>
                     
-                </field>
-                <field name="email_to_a_friend_text" type="text" default="Email a friend" label="COM_JOBGROKLIST_CONFIG_XML_EMAIL_TO_A_FRIEND_TEXT" description='COM_JOBGROKLIST_CONFIG_XML_SH_EMAIL_TO_A_FRIEND_TEXT' />
-            </fieldset>
+            
             <fieldset name='rss_settings'>
                 <field name="spacer1" type="spacer" class="text" label="COM_JOBGROKLIST_CONFIG_XML_SPACER_RSS_SETTINGS_POSTINGS" />
                 <field name="mobile_app_menu_item" type="sql" default="0" label="COM_JOBGROKLIST_CONFIG_XML_MOBILE_APP_MENU_ITEM" description='COM_JOBGROKLIST_CONFIG_XML_SH_MOBILE_APP_MENU_ITEM' query="SELECT '' as value,'- Select Menu Item -' as mobile_app_menu_item UNION SELECT id AS value, title AS mobile_app_menu_item FROM #__menu WHERE INSTR(`link`,'com_jobgroklist')>0 AND INSTR(`link`,'view=postings')>0;" />
