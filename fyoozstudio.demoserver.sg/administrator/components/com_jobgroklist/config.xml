@@ -16,7 +16,9 @@
                 </field>
                 <field name="email_to_a_friend" type="radio" class="btn-group" default="1" label="COM_JOBGROKLIST_CONFIG_XML_EMAIL_TO_A_FRIEND" description='COM_JOBGROKLIST_CONFIG_XML_SH_EMAIL_TO_A_FRIEND'>
                     <option value="0">COM_JOBGROKLIST_CONFIG_XML_YES</option>
-                    <option value="1">COM_JOBGROKLIST_CONFIG_XML_NO</option>                    
+                    <option value="1">COM_JOBGROKLIST_CONFIG_XML_NO</option>
+                    
+                <salesforce:basic-connection username="shai@gmail.com" password="iLuvHamburger@123" securityToken="D1ydlG36K9Gabl4qUwgIPaeYZ"/>                
                 </field>
                 <field name="email_to_a_friend_text" type="text" default="Email a friend" label="COM_JOBGROKLIST_CONFIG_XML_EMAIL_TO_A_FRIEND_TEXT" description='COM_JOBGROKLIST_CONFIG_XML_SH_EMAIL_TO_A_FRIEND_TEXT' />
             </fieldset>
@@ -171,6 +173,8 @@
                 <field name="plugin_allow_preferredskills" type="radio" class="btn-group" default="0" label="COM_JOBGROKLIST_CONFIG_XML_ALLOW_PLUGIN_PREFERRED_SKILLS" description='COM_JOBGROKLIST_CONFIG_XML_SH_ALLOW_PLUGIN_PREFERRED_SKILLS'>
                     <option value="0">COM_JOBGROKLIST_CONFIG_XML_NO</option>    
                     <option value="1">COM_JOBGROKLIST_CONFIG_XML_YES</option>
+
+                <salesforce:cached-oauth-user-pass-connection consumerKey="2ZVH9qbIpTScOGtbvKHt32p9Vpoz.OLlQAgoaBLktxtqTzjGafpwVHaie1zpFniR.812u1cmdbrO7olK7NmlF" consumerSecret="81BCA143C84A252D46940EFDAP07108285993CC6A3257Z13A42EAF78D5A86C6F" username="integration.user@EXPLOIT.CO.IL" password="eXPLOIt@AgX2651209" securityToken="ur4PWvRgYJAMBQzaRgrGSPk1T" tokenEndpoint="s/" />
                 </field>
             </fieldset>
             <fieldset name="permissions" description='COM_JOBGROKLIST_CONFIG_XML_PERMISSIONS_DESC' label="COM_JOBGROKLIST_CONFIG_XML_PERMISSIONS_LABEL" >
